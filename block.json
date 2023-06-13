@@ -1,15 +1,14 @@
 {
 	"apiVersion": "1",
-	"name": "bdb/block-directory",
-	"title": "Block directory",
-	"description": "Description of Block directory.",
+	"name": "sdb/shapes",
+	"title": "Shape Divider",
+	"description": "Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns,",
 	"category": "widgets",
 	"keywords": [
-		"key1",
-		"key2",
-		"key3"
+		"sdb",
+		"sdb-shape-divider"
 	],
-	"textdomain": "block-directory",
+	"textdomain": "sdb-shape-divider",
 	"attributes": {
 		"align": {
 			"type": "string",
@@ -69,7 +68,7 @@
 		"content": {
 			"type": "string",
 			"default": "Content of the block",
-			"selector": ".bdbBlockDirectory .content"
+			"selector": ".sdbBlockDirectory .content"
 		},
 		"typography": {
 			"type": "object",

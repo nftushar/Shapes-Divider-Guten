@@ -5,7 +5,7 @@ import Style from './Style';
 
 // Block Directory
 document.addEventListener('DOMContentLoaded', () => {
-	const allBlockDirectory = document.querySelectorAll('.wp-block-bdb-block-directory');
+	const allBlockDirectory = document.querySelectorAll('.wp-block-sdb-sdb-shape-divider');
 	allBlockDirectory.forEach(directory => {
 		const attributes = JSON.parse(directory.dataset.attributes);
 
@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
 const Directory = ({ attributes }) => {
 	const { items, columns, layout, content, icon, img } = attributes;
 
-	return <div className={`bdbBlockDirectory columns-${columns.desktop} columns-tablet-${columns.tablet} columns-mobile-${columns.mobile} ${layout || 'vertical'}`}>
+	return <div className={`sdbBlockDirectory columns-${columns.desktop} columns-tablet-${columns.tablet} columns-mobile-${columns.mobile} ${layout || 'vertical'}`}>
 		{items?.map((item, index) => {
 			const { number, text } = item;
 
-			return <div key={index} id={`bdbBlockDirectoryItem-${index}`}>
-				<div className='bdbBlockDirectoryItem'>
+			return <div key={index} id={`sdbBlockDirectoryItem-${index}`}>
+				<div className='sdbBlockDirectoryItem'>
 					<span className='number'>{number}</span>
 					<span className='text' dangerouslySetInnerHTML={{ __html: text }} />
 				</div>

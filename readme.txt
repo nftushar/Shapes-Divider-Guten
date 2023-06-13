@@ -16,7 +16,7 @@ Short Description
 Large Description
 
 
-**[Demos](https://bblockswp.com/demo/block-directory/)**
+**[Demos](https://bblockswp.com/demo/sdb-shape-divider/)**
 
 
 = Features =
@@ -64,7 +64,7 @@ Large Description
 = Download & Upload: =
 1. Download the **Block Directory** plugin (*.zip file*)
 2. In your admin area, go to the Plugins menu and click on **Add New**
-3. Click on **Upload Plugin** and choose the **`block-directory.zip`** file and click on **Install Now**
+3. Click on **Upload Plugin** and choose the **`sdb-shape-divider.zip`** file and click on **Install Now**
 4. Activate the plugin and Enjoy!
 
 = Manually: =
@@ -92,7 +92,7 @@ You can use unlimited times as you want.
 
 = Where can I get support? =
 
-You can post your questions on the [support forum here](https://wordpress.org/support/plugin/block-directory/)
+You can post your questions on the [support forum here](https://wordpress.org/support/plugin/sdb-shape-divider/)
 
 
 == Screenshots ==

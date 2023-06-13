@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Block Directory 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-directory\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sdb-shape-divider\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2023-04-28T16:08:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
-"X-Domain: block-directory\n"
+"X-Domain: sdb-shape-divider\n"
 
 #. Plugin Name of the plugin
 msgid "Block Directory"

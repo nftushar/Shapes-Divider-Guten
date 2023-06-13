@@ -3,8 +3,8 @@ import { getBackgroundCSS, getBorderCSS, getColorsCSS, getIconCSS, getSeparatorC
 const Style = ({ attributes, clientId }) => {
 	const { columnGap, rowGap, alignment, textAlign, width, background, typography, color, colors, icon, separator, padding, margin, border, shadow } = attributes;
 
-	const mainSl = `#bdbBlockDirectory-${clientId}`;
-	const directorySl = `${mainSl} .bdbBlockDirectory`;
+	const mainSl = `#sdbBlockDirectory-${clientId}`;
+	const directorySl = `${mainSl} .sdbBlockDirectory`;
 
 	return <style dangerouslySetInnerHTML={{
 		__html: `
