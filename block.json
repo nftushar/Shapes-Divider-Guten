@@ -27,84 +27,26 @@
 				}
 			]
 		},
-		"columns": {
-			"type": "object",
-			"default": {
-				"desktop": 3,
-				"tablet": 2,
-				"mobile": 1
-			}
-		},
-		"columnGap": {
-			"type": "string",
-			"default": "30px"
-		},
-		"rowGap": {
-			"type": "string",
-			"default": "40px"
-		},
-		"layout": {
-			"type": "string",
-			"default": "vertical"
-		},
 		"alignment": {
 			"type": "string",
-			"default": "center"
+			"default": "buttom"
 		},
-		"textAlign": {
+		"height": {
 			"type": "string",
-			"default": "center"
+			"default": "10%"
 		},
 		"width": {
 			"type": "string",
-			"default": "80%"
-		},
-		"background": {
-			"type": "object",
-			"default": {
-				"color": "#0000"
-			}
+			"default": "100%"
 		},
 		"content": {
 			"type": "string",
 			"default": "Content of the block",
 			"selector": ".sdbBlockDirectory .content"
 		},
-		"typography": {
-			"type": "object",
-			"default": {
-				"fontSize": 25
-			}
-		},
 		"color": {
 			"type": "string",
 			"default": "#333"
-		},
-		"colors": {
-			"type": "object",
-			"default": {
-				"color": "#333",
-				"bg": "#fff"
-			}
-		},
-		"img": {
-			"type": "object",
-			"default": {
-				"id": null,
-				"url": "",
-				"alt": "",
-				"title": ""
-			}
-		},
-		"isIcon": {
-			"type": "boolean",
-			"default": true
-		},
-		"icon": {
-			"type": "object",
-			"default": {
-				"class": "fab fa-wordpress"
-			}
 		},
 		"separator": {
 			"type": "object",
