@@ -7,10 +7,11 @@ import Tilt from './Components/Tilt';
 import Curve from './Components/Curve';
 import Settings from './Settings';
 import Style from './Style';
+import Shape from './Components/Shape';
 
 const Edit = props => {
 	const { className, attributes, setAttributes, clientId, isSelected } = props;
-	const { items, columns, layout, content, icon, img } = attributes;
+	const { items } = attributes;
 
 	useEffect(() => { clientId && setAttributes({ cId: clientId.substring(0, 10) }); }, [clientId]); // Set & Update clientId to cId
 
@@ -38,20 +39,7 @@ const Edit = props => {
 			<Style attributes={attributes} clientId={clientId} />
 			<h1>Hello</h1>
 
-			<Curve style={{
-				transform: 'rotate(180deg)',
-				bottom: '0px'
-			}}
-
-				svgStyle={
-
-					{
-						width: "calc(100% + 1.3px)",
-						height: "150px"
-					}
-
-				}
-			></Curve>
+			<Shape attributes={attributes} width={500} />
 		</div>
 	</>;
 };

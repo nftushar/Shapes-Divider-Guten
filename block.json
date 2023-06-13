@@ -18,6 +18,10 @@
 			"type": "string",
 			"default": ""
 		},
+		"shape": {
+			"type": "string",
+			"default": "curve"
+		},
 		"items": {
 			"type": "array",
 			"default": [

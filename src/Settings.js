@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, TabPanel, TextControl, ToggleControl, SelectControl, CheckboxControl, RadioControl, RangeControl, __experimentalUnitControl as UnitControl, __experimentalNumberControl as NumberControl, Button, Dashicon, ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { PanelBody, PanelRow, TabPanel, ToggleControl, SelectControl, CheckboxControl, RadioControl, __experimentalUnitControl as UnitControl, __experimentalNumberControl as Dashicon, ToolbarGroup, ToolbarButton } from '@wordpress/components';
 import produce from 'immer';
 
 // Settings Components
-import { Label, Background, BColor, BDevice, BorderControl, BtnGroup, ColorsControl, IconControl, InlineDetailMediaUpload, MultiShadowControl, SeparatorControl, SpaceControl, Typography } from '../../Components';
-import { gearIcon } from '../../Components/utils/icons';
+import { Label, BColor, BorderControl, ColorsControl, MultiShadowControl, SeparatorControl, SpaceControl } from '../../Components';
+// import { gearIcon } from '../../Components/utils/icons';
 import { tabController } from '../../Components/utils/functions';
 import { emUnit, perUnit, pxUnit } from '../../Components/utils/options';
 
-import { generalStyleTabs, layouts } from './utils/options';
+import { generalStyleTabs, layouts, shapes } from './utils/options';
 
-const Settings = ({ attributes, setAttributes, updateItem, activeIndex, setActiveIndex }) => {
-	const { items, columns, columnGap, rowGap, layout, alignment, textAlign, width, background, typography, color, colors, isIcon, icon, img, separator, padding, margin, border, shadow } = attributes;
+const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
+	const { shape, items, layout, alignment, textAlign, width, color, colors, isIcon, separator, padding, margin, border, shadow } = attributes;
 
 	const [device, setDevice] = useState('desktop');
 
@@ -40,23 +40,23 @@ const Settings = ({ attributes, setAttributes, updateItem, activeIndex, setActiv
 		setAttributes({ items: newItems });
 	}
 
-	const duplicateItem = e => {
-		e.preventDefault();
+	// const duplicateItem = e => {
+	// 	e.preventDefault();
 
-		setAttributes({ items: [...items.slice(0, activeIndex), { ...items[activeIndex] }, ...items.slice(activeIndex)] });
+	// 	setAttributes({ items: [...items.slice(0, activeIndex), { ...items[activeIndex] }, ...items.slice(activeIndex)] });
 
-		setActiveIndex(activeIndex + 1);
-	}
+	// 	setActiveIndex(activeIndex + 1);
+	// }
 
-	const removeItem = e => {
-		e.preventDefault();
+	// const removeItem = e => {
+	// 	e.preventDefault();
 
-		setAttributes({ items: [...items.slice(0, activeIndex), ...items.slice(activeIndex + 1)] });
+	// 	setAttributes({ items: [...items.slice(0, activeIndex), ...items.slice(activeIndex + 1)] });
 
-		setActiveIndex(0 === activeIndex ? 0 : activeIndex - 1);
-	}
+	// 	setActiveIndex(0 === activeIndex ? 0 : activeIndex - 1);
+	// }
 
-	const { number = '', text = '' } = items[activeIndex] || {};
+	// const { number = '', text = '' } = items[activeIndex] || {};
 
 	return <>
 		<InspectorControls>
@@ -90,11 +90,24 @@ const Settings = ({ attributes, setAttributes, updateItem, activeIndex, setActiv
 						<CheckboxControl className='mt20' label={__('Toggle?', 'block-directory')} checked={isIcon} onChange={val => setAttributes({ isIcon: val })} />
 
 						<PanelRow>
-							<Label mt='0' mb='0'>{__('Layout:', 'block-directory')}</Label>
+							<Label mt='0' mb='0'>{__('Shape:', 'block-directory')}</Label>
+							<SelectControl value={shape} onChange={val => setAttributes({ shape: val })} options={shapes} />
+
+
+							{/* <SelectControl value={layout} onChange={val => {
+								setAttributes({ layout: val });
+								'Curve' === val && updateAllItem('number', 10);
+								'CurveAcymmetrical' === val && updateAllItem('number', 20);
+								'Tilt' === val && updateAllItem('number', 30);
+								'Waves' === val && updateAllItem('number', 40);
+							}} options={layouts} /> */}
+						</PanelRow>
+						<PanelRow>
+							<Label mt='0' mb='0'>{__('Top/bottom:', 'block-directory')}</Label>
 							<SelectControl value={layout} onChange={val => {
 								setAttributes({ layout: val });
-								'vertical' === val && updateAllItem('number', 10);
-								'horizontal' === val && updateAllItem('number', 20);
+								'Top' === val && updateAllItem('number', 10);
+								'Bottom' === val && updateAllItem('number', 20);
 							}} options={layouts} />
 						</PanelRow>
 						<small>{__('Some settings may change when layout will be changed.', 'block-directory')}</small>
