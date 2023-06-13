@@ -1,9 +1,6 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
+$primaryColor: #4527a4;
 
-.wp-block-create-block-divider {
-	border: 1px dotted rgb(230, 81, 81);
+// Custom
+.bdbNowEditing{
+	outline: 2px solid $primaryColor;
 }

@@ -1,55 +1,113 @@
-=== Divider ===
-Contributors:      The WordPress Contributors
-Tags:              block
-Tested up to:      6.1
-Stable tag:        0.1.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+=== Block Directory - Block Directory Block ===
+Contributors: abuhayat, charlescormier
+Donate link: https://gum.co/wpdonate/
+Tags: block, key1, key2, key3, Gutenberg block
+Requires at least: 5.0+
+Tested up to: 6.2.2
+Stable tag: 1.0.0
+Requires PHP: 7.1
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Example block scaffolded with Create Block tool.
+Short Description
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+Large Description
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+
+**[Demos](https://bblockswp.com/demo/block-directory/)**
+
+
+= Features =
+- **Fully Customizable**: All the options you need to arrange the showcase to your liking are available here.
+
+
+= How to use =
+- First install the Block Directory plugin
+- Add the Block Directory block from the block category called "Widgets" in Gutenberg editor.
+- You can change block settings from the right side settings sidebar.
+- Enjoy!
+
+* For installation help click on Installation Tab
+
+
+= Feedback =
+- Liked that plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
+
+
+= ⭐ Check out the Parent Plugin of this plugin- =
+
+🔥 **[b Blocks](https://bblockswp.com/)** – Best gutenberg blocks collections for WordPress.
+
+
+= ⭐ Check out our other WordPress Plugins- =
+
+🔥 **[Html5 Audio Player](https://audioplayerwp.com/)** – Best audio player plugin for WordPress.
+
+🔥 **[Html5 Video Player](https://wpvideoplayer.com/)** – Best video player plugin for WordPress.
+
+🔥 **[PDF Poster](http://pdfposter.com/)** – A fully-featured PDF Viewer Plugin for WordPress.
+
+🔥 **[StreamCast](https://wordpress.org/plugins/streamcast)** – A fully-featured Radio Player Plugin for WordPress.
+
+🔥 **[3D Viewer](https://3d-viewer.bplugins.com/)** – Display interactive 3D models on the webs.
+
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+= From Gutenberg Editor: =
+1. Go to the WordPress Block/Gutenberg Editor
+2. Search For **Block Directory**
+3. Click on the **Block Directory** to add the block
 
-e.g.
+= Download & Upload: =
+1. Download the **Block Directory** plugin (*.zip file*)
+2. In your admin area, go to the Plugins menu and click on **Add New**
+3. Click on **Upload Plugin** and choose the **`block-directory.zip`** file and click on **Install Now**
+4. Activate the plugin and Enjoy!
 
-1. Upload the plugin files to the `/wp-content/plugins/divider` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+= Manually: =
+1. Download and upload the **Block Directory** plugin to the **`/wp-content/plugins/`** directory
+2. Activate the plugin through the Plugins menu in WordPress
 
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Is Block Directory free? =
 
-An answer to that question.
+Yes, Block Directory is a free Gutenberg block plugin.
 
-= What about foo bar? =
+= Does it work with any WordPress theme? =
 
-Answer to foo bar dilemma.
+Yes, it will work with any standard WordPress theme.
+
+= Can I change block settings? =
+
+Yes, you can change block settings from the Gutenberg block editor's right sidebar.
+
+= How many times can I reuse a block? =
+
+You can use unlimited times as you want.
+
+= Where can I get support? =
+
+You can post your questions on the [support forum here](https://wordpress.org/support/plugin/block-directory/)
+
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Block Directory
+2. Settings
+
 
 == Changelog ==
 
-= 0.1.0 =
-* Release
+= 1.0.0 =
+* Initial Release
 
-== Arbitrary section ==
 
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+== Upgrade Notice ==
+
+= 1.0.0 =
+* Initial Release

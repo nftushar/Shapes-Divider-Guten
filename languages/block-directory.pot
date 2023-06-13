@@ -1,0 +1,228 @@
+# Copyright (C) 2023 bPlugins LLC
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Block Directory 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/block-directory\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-04-28T16:08:50+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: block-directory\n"
+
+#. Plugin Name of the plugin
+msgid "Block Directory"
+msgstr ""
+
+#. Description of the plugin
+msgid "Description of the Block Directory."
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins LLC"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://bplugins.com"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8034
+msgid "Vertical"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8035
+msgid "Horizontal"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8039
+msgid "General"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8040
+msgid "Style"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8106
+msgid "Add or Remove Items"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8110
+msgid "Number:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8112
+msgid "Text:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8116
+msgid "Remove"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8118
+msgid "Duplicate"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8123
+msgid "Add New Card"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8128
+msgid "Component Settings"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8129
+#: dist/editor.js:8131
+msgid "Toggle?"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8134
+msgid "Layout:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8141
+#: dist/editor.js:8176
+msgid "Some settings may change when layout will be changed."
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8148
+msgid "Width:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8149
+msgid "Keep width 0, to auto width."
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8153
+msgid "Custom Components"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8155
+msgid "Columns:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8160
+msgid "Column Gap:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8162
+msgid "Row Gap:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8164
+msgid "Enter Image URL"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8169
+msgid "Position:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8182
+msgid "Custom Style"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8183
+msgid "Background:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8185
+msgid "Typography:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8187
+msgid "Color:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8191
+msgid "Padding:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8195
+msgid "Margin:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8197
+msgid "Border:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8199
+msgid "Shadow:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8212
+msgid "Block Directory in left"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8213
+msgid "Block Directory in center"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8214
+msgid "Block Directory in right"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:8468
+msgid "Write Content"
+msgstr ""
+
+#: block.json
+msgctxt "block title"
+msgid "Block directory"
+msgstr ""
+
+#: block.json
+msgctxt "block description"
+msgid "Description of Block directory."
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "key1"
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "key2"
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "key3"
+msgstr ""

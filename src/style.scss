@@ -1,11 +1,31 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+$primaryColor: #4527a4;
 
-.wp-block-create-block-divider {
-	color: #f3d31f;
-	padding: 2px;
+// Common CSS
+html {
+	scroll-behavior: smooth;
+}
+
+// Dashicon
+.dashicons {
+	font-family: dashicons !important;
+}
+
+// Block Directory
+.wp-block-bdb-block-directory {
+	* {
+		box-sizing: border-box;
+	}
+
+	.bdbBlockDirectory {
+		display: inline-block;
+	}
+
+	.icon {
+		font-style: inherit;
+	}
+
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
 }

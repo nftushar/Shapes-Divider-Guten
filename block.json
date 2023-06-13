@@ -1,0 +1,162 @@
+{
+	"apiVersion": "1",
+	"name": "bdb/block-directory",
+	"title": "Block directory",
+	"description": "Description of Block directory.",
+	"category": "widgets",
+	"keywords": [
+		"key1",
+		"key2",
+		"key3"
+	],
+	"textdomain": "block-directory",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": ""
+		},
+		"cId": {
+			"type": "string",
+			"default": ""
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{
+					"number": 10,
+					"text": "Vertical"
+				}
+			]
+		},
+		"columns": {
+			"type": "object",
+			"default": {
+				"desktop": 3,
+				"tablet": 2,
+				"mobile": 1
+			}
+		},
+		"columnGap": {
+			"type": "string",
+			"default": "30px"
+		},
+		"rowGap": {
+			"type": "string",
+			"default": "40px"
+		},
+		"layout": {
+			"type": "string",
+			"default": "vertical"
+		},
+		"alignment": {
+			"type": "string",
+			"default": "center"
+		},
+		"textAlign": {
+			"type": "string",
+			"default": "center"
+		},
+		"width": {
+			"type": "string",
+			"default": "80%"
+		},
+		"background": {
+			"type": "object",
+			"default": {
+				"color": "#0000"
+			}
+		},
+		"content": {
+			"type": "string",
+			"default": "Content of the block",
+			"selector": ".bdbBlockDirectory .content"
+		},
+		"typography": {
+			"type": "object",
+			"default": {
+				"fontSize": 25
+			}
+		},
+		"color": {
+			"type": "string",
+			"default": "#333"
+		},
+		"colors": {
+			"type": "object",
+			"default": {
+				"color": "#333",
+				"bg": "#fff"
+			}
+		},
+		"img": {
+			"type": "object",
+			"default": {
+				"id": null,
+				"url": "",
+				"alt": "",
+				"title": ""
+			}
+		},
+		"isIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"icon": {
+			"type": "object",
+			"default": {
+				"class": "fab fa-wordpress"
+			}
+		},
+		"separator": {
+			"type": "object",
+			"default": {
+				"width": "20%",
+				"height": "2px",
+				"style": "solid",
+				"color": "#bbb"
+			}
+		},
+		"padding": {
+			"type": "object",
+			"default": {
+				"vertical": "15px",
+				"horizontal": "30px"
+			}
+		},
+		"margin": {
+			"type": "object",
+			"default": {
+				"bottom": "15px"
+			}
+		},
+		"border": {
+			"type": "object",
+			"default": {
+				"radius": "5px"
+			}
+		},
+		"shadow": {
+			"type": "array",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"columns": {
+				"desktop": 1,
+				"tablet": 1,
+				"mobile": 1
+			}
+		}
+	},
+	"editorScript": "file:dist/editor.js",
+	"script": "file:dist/script.js"
+}
