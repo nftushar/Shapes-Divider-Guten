@@ -128,7 +128,7 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 							]} />
 						</PanelRow>
 
-						<UnitControl className='mt20' label={__('Height:', 'block-directory')} labelPosition='left' value={height.desktop} onChange={val => setAttributes({ height:{desktop:val, tablet:val, mobile:val} })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
+						<UnitControl className='mt20' label={__('Height:', 'block-directory')} labelPosition='left' value={height.desktop} onChange={val => setAttributes({ height: { desktop: val, tablet: val, mobile: val } })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
 						<small>{__('Keep height 0, to auto height.', 'block-directory')}</small>
 
 						<UnitControl className='mt20' label={__('Width:', 'block-directory')} labelPosition='left' value={width} onChange={val => setAttributes({ width: val })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
@@ -166,43 +166,14 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 
 				{'style' === tab.name && <>
 					<PanelBody className='bPlPanelBody' title={__('Custom Style', 'block-directory')}>
-						{/* <Background label={__('Background:', 'block-directory')} value={background} onChange={val => setAttributes({ background: val })} /> */}
-						{/* 
-						<Typography className='mt20' label={__('Typography:', 'block-directory')} value={typography} onChange={val => setAttributes({ typography: val })} defaults={{ fontSize: 25 }} produce={produce} /> */}
 
 						<BColor label={__('Color:', 'block-directory')} value={color} onChange={val => setAttributes({ color: val })} defaultColor='#333' />
 
-						{/* <ColorsControl value={colors} onChange={val => setAttributes({ colors: val })} defaults={{ color: '#333', bg: '#fff' }} /> */}
-
-						<SpaceControl className='mt20' label={__('Padding:', 'block-directory')} value={padding} onChange={val => setAttributes({ padding: val })} defaults={{ vertical: '15px', horizontal: '30px' }} />
-
-						<SeparatorControl className='mt20' value={separator} onChange={val => setAttributes({ separator: val })} defaults={{ width: '20%', height: '2px', style: 'solid', color: '#bbb' }} />
-
-
-						<SpaceControl className='mt20' label={__('Margin:', 'block-directory')} value={margin} onChange={val => setAttributes({ margin: val })} defaults={{ side: 2, bottom: '15px' }} />
-
-						<BorderControl label={__('Border:', 'block-directory')} value={border} onChange={val => setAttributes({ border: val })} defaults={{ radius: '5px' }} />
-
-						<MultiShadowControl label={__('Shadow:', 'block-directory')} value={shadow} onChange={val => setAttributes({ shadow: val })} produce={produce} />
 					</PanelBody>
 				</>}
 			</>}</TabPanel>
 		</InspectorControls>
 
-
-		<BlockControls>
-			<ToolbarGroup className='bPlToolbar'>
-				<ToolbarButton label={__('Add New Item', 'b-blocks')} onClick={addItem}><Dashicon icon='plus' size={23} /></ToolbarButton>
-			</ToolbarGroup>
-
-			<AlignmentToolbar value={alignment} onChange={val => setAttributes({ alignment: val })} describedBy={__('Block Directory Alignment')} alignmentControls={[
-				{ title: __('Block Directory in left', 'block-directory'), align: 'left', icon: 'align-left' },
-				{ title: __('Block Directory in center', 'block-directory'), align: 'center', icon: 'align-center' },
-				{ title: __('Block Directory in right', 'block-directory'), align: 'right', icon: 'align-right' }
-			]} />
-
-			<AlignmentToolbar value={textAlign} onChange={val => setAttributes({ textAlign: val })} />
-		</BlockControls>
 	</>;
 };
 export default Settings;
