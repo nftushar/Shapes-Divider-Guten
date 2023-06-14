@@ -13,7 +13,7 @@ import { emUnit, perUnit, pxUnit } from '../../Components/utils/options';
 import { generalStyleTabs, layouts, shapes } from './utils/options';
 
 const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
-	const { shape, items, layout, possition, alignment, textAlign, width, color, colors, isIcon, separator, padding, margin, border, shadow } = attributes;
+	const { shape, items, layout, possition, alignment, textAlign, width, height, color, colors, isIcon, separator, padding, margin, border, shadow } = attributes;
 
 	const [device, setDevice] = useState('desktop');
 
@@ -84,10 +84,10 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 					</PanelBody> */}
 
 
-					<PanelBody className='bPlPanelBody' title={__('Component Settings', 'block-directory')} initialOpen={false}>
-						<ToggleControl label={__('Toggle?', 'block-directory')} checked={isIcon} onChange={val => setAttributes({ isIcon: val })} />
+					<PanelBody className='bPlPanelBody' title={__('Component Settings', 'block-directory')} initialOpen={true}>
+						{/* <ToggleControl label={__('Toggle?', 'block-directory')} checked={isIcon} onChange={val => setAttributes({ isIcon: val })} /> */}
 
-						<CheckboxControl className='mt20' label={__('Toggle?', 'block-directory')} checked={isIcon} onChange={val => setAttributes({ isIcon: val })} />
+						{/* <CheckboxControl className='mt20' label={__('Toggle?', 'block-directory')} checked={isIcon} onChange={val => setAttributes({ isIcon: val })} /> */}
 
 						<PanelRow>
 							<Label mt='0' mb='0'>{__('Shape:', 'block-directory')}</Label>
@@ -105,7 +105,7 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 
 
 						<PanelRow>
-							<Label mt='0' mb='0'>{__('Top/bottomzz:', 'block-directory')}</Label>
+							<Label mt='0' mb='0'>{__('Top/bottom:', 'block-directory')}</Label>
 							<SelectControl value={possition} onChange={val => {
 								setAttributes({ possition: val });
 							}} options={[
@@ -117,17 +117,21 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 
 
 						</PanelRow>
-						<small>{__('Some settings may change when layout will be changed.', 'block-directory')}</small>
+						<small>{__('Some settings may change when possition will be changed.', 'block-directory')}</small>
 
 						<PanelRow>
-							<Label mt='0' mb='0'>{__('Layout:', 'b-blocks')}</Label>
-							<RadioControl selected={layout} onChange={val => setAttributes({ layout: val })} options={layouts} />
+							<Label mt='0' mb='0'>{__('possition:', 'b-blocks')}</Label>
+							<RadioControl selected={possition} onChange={val => setAttributes({ possition: val })} options={[
+								{ label: 'Top', value: 'top' },
+								{ label: 'Buttom', value: 'bottom' },
+
+							]} />
 						</PanelRow>
 
-						<UnitControl className='mt20' label={__('Width:', 'block-directory')} labelPosition='left' value={width} onChange={val => setAttributes({ width: val })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
-						<small>{__('Keep width 0, to auto width.', 'block-directory')}</small>
+						<UnitControl className='mt20' label={__('Height:', 'block-directory')} labelPosition='left' value={height} onChange={val => setAttributes({ height: val })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
+						<small>{__('Keep height 0, to auto height.', 'block-directory')}</small>
 
-						<UnitControl className='mt20' label={__('Height:', 'block-directory')} labelPosition='left' value={width} onChange={val => setAttributes({ width: val })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
+						<UnitControl className='mt20' label={__('Width:', 'block-directory')} labelPosition='left' value={width} onChange={val => setAttributes({ width: val })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
 						<small>{__('Keep width 0, to auto width.', 'block-directory')}</small>
 					</PanelBody>
 

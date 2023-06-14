@@ -9,8 +9,8 @@ import Shape from './Components/Shape';
 
 const Edit = props => {
 	const { className, attributes, setAttributes, clientId, isSelected } = props;
-	const { items, color, possition } = attributes;
-	// console.log(possition);
+	const { items, color, possition, width, height } = attributes;
+	// console.log(height);
 	useEffect(() => { clientId && setAttributes({ cId: clientId.substring(0, 10) }); }, [clientId]); // Set & Update clientId to cId
 
 	useEffect(() => tabController(), [isSelected]);
@@ -36,7 +36,7 @@ const Edit = props => {
 			<Style attributes={attributes} clientId={clientId} />
 			<h1>Hello Form Edit</h1>
 			{/* If rotate 180D Possition Top && If rotate 0D Possition Buttom */}
-			<Shape attributes={attributes} width="100%" style={{ fill: color, transform: `rotate(${'top' === possition ? 0 : 180}deg)` }} />
+			<Shape attributes={attributes} height={`${height}`} width={`${width}`} style={{ fill: color, transform: `rotate(${'top' === possition ? 0 : 180}deg)` }} />
 
 		</div>
 	</>;
