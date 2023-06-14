@@ -1,10 +1,12 @@
 Shape Selector Dropdown,
 color,
 Top/Button Dropdown,
+Height, Width RangeControl
+
 
 Flipper On/Off Button,
 
-Height, Width RangeControl
+
 
 
  Device  Controller
