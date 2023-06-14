@@ -128,7 +128,7 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 							]} />
 						</PanelRow>
 
-						<UnitControl className='mt20' label={__('Height:', 'block-directory')} labelPosition='left' value={height} onChange={val => setAttributes({ height: val })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
+						<UnitControl className='mt20' label={__('Height:', 'block-directory')} labelPosition='left' value={height.desktop} onChange={val => setAttributes({ height:{desktop:val, tablet:val, mobile:val} })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
 						<small>{__('Keep height 0, to auto height.', 'block-directory')}</small>
 
 						<UnitControl className='mt20' label={__('Width:', 'block-directory')} labelPosition='left' value={width} onChange={val => setAttributes({ width: val })} units={[pxUnit(900), perUnit(100), emUnit(56)]} isResetValueOnUnitChange={true} />
@@ -172,7 +172,7 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 
 						<BColor label={__('Color:', 'block-directory')} value={color} onChange={val => setAttributes({ color: val })} defaultColor='#333' />
 
-						<ColorsControl value={colors} onChange={val => setAttributes({ colors: val })} defaults={{ color: '#333', bg: '#fff' }} />
+						{/* <ColorsControl value={colors} onChange={val => setAttributes({ colors: val })} defaults={{ color: '#333', bg: '#fff' }} /> */}
 
 						<SpaceControl className='mt20' label={__('Padding:', 'block-directory')} value={padding} onChange={val => setAttributes({ padding: val })} defaults={{ vertical: '15px', horizontal: '30px' }} />
 

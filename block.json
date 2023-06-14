@@ -36,8 +36,12 @@
 			"default": "bottom"
 		},
 		"height": {
-			"type": "string",
-			"default": "150"
+			"type": "object",
+			"default": {
+				"desktop": "150px",
+				"tablet": "150px",
+				"mobile": "150px"
+			}
 		},
 		"width": {
 			"type": "string",
