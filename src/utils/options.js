@@ -4,7 +4,9 @@ import { verticalLineIcon, horizontalLineIcon } from './icons';
 
 export const shapes = [
 	{ label: __('Curve', 'sdb-shape-divider'), value: 'curve' },
-	{ label: __('Tilt', 'sdb-shape-divider'), value: 'tilt' }
+	{ label: __('Tilt', 'sdb-shape-divider'), value: 'tilt' },
+	{ label: __('CurveAcymmetrical', 'sdb-shape-divider'), value: 'curveAcymmetrical' },
+	{ label: __('Waves', 'sdb-shape-divider'), value: 'waves' }
 ];
 
 export const layouts = [

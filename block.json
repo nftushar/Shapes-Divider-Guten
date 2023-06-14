@@ -31,9 +31,9 @@
 				}
 			]
 		},
-		"alignment": {
+		"possition": {
 			"type": "string",
-			"default": "buttom"
+			"default": "bottom"
 		},
 		"height": {
 			"type": "string",
@@ -50,7 +50,7 @@
 		},
 		"color": {
 			"type": "string",
-			"default": "#333"
+			"default": "#fe6601"
 		},
 		"separator": {
 			"type": "object",

@@ -13,7 +13,7 @@ import { emUnit, perUnit, pxUnit } from '../../Components/utils/options';
 import { generalStyleTabs, layouts, shapes } from './utils/options';
 
 const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
-	const { shape, items, layout, alignment, textAlign, width, color, colors, isIcon, separator, padding, margin, border, shadow } = attributes;
+	const { shape, items, layout, possition, alignment, textAlign, width, color, colors, isIcon, separator, padding, margin, border, shadow } = attributes;
 
 	const [device, setDevice] = useState('desktop');
 
@@ -102,13 +102,20 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 								'Waves' === val && updateAllItem('number', 40);
 							}} options={layouts} /> */}
 						</PanelRow>
+
+
 						<PanelRow>
-							<Label mt='0' mb='0'>{__('Top/bottom:', 'block-directory')}</Label>
-							<SelectControl value={layout} onChange={val => {
-								setAttributes({ layout: val });
-								'Top' === val && updateAllItem('number', 10);
-								'Bottom' === val && updateAllItem('number', 20);
-							}} options={layouts} />
+							<Label mt='0' mb='0'>{__('Top/bottomzz:', 'block-directory')}</Label>
+							<SelectControl value={possition} onChange={val => {
+								setAttributes({ possition: val });
+							}} options={[
+								{ label: 'Top', value: 'top' },
+								{ label: 'Buttom', value: 'bottom' },
+
+							]} />
+
+
+
 						</PanelRow>
 						<small>{__('Some settings may change when layout will be changed.', 'block-directory')}</small>
 
