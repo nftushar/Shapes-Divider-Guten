@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:Shape Divider On Going
+ * Plugin Name:Shape Divider
  * Description: Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns.
  * Version: 1.0.0
  * Author: bPlugins LLC
@@ -45,7 +45,7 @@ class sdbBlockDirectory{
 		extract( $attributes );
 
 		$className = $className ?? '';
-		$sdbBlockClassName = 'wp-block-sdb-sdb-shape-divider ' . $className . ' align' . $align;
+		$sdbBlockClassName = 'wp-block-sdb-shapes ' . $className . ' align' . $align;
 
 		ob_start(); ?>
 		<div class='<?php echo esc_attr( $sdbBlockClassName ); ?>' id='sdbBlockDirectory-<?php echo esc_attr( $cId ) ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'></div>

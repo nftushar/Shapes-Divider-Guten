@@ -135,32 +135,6 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 						<small>{__('Keep width 0, to auto width.', 'block-directory')}</small>
 					</PanelBody>
 
-
-					{/* <PanelBody className='bPlPanelBody' title={__('Custom Components', 'block-directory')} initialOpen={false}>
-						<PanelRow>
-							<Label mt='0'>{__('Columns:', 'block-directory')}</Label>
-							<BDevice device={device} onChange={val => setDevice(val)} />
-						</PanelRow>
-						<RangeControl value={columns[device]} onChange={val => { setAttributes({ columns: { ...columns, [device]: val } }) }} min={1} max={6} step={1} beforeIcon='grid-view' />
-
-						<UnitControl className='mt20' label={__('Column Gap:', 'block-directory')} labelPosition='left' value={columnGap} onChange={val => setAttributes({ columnGap: val })} units={[pxUnit(30), perUnit(3), emUnit(2)]} isResetValueOnUnitChange={true} />
-
-						<UnitControl className='mt20' label={__('Row Gap:', 'block-directory')} labelPosition='left' value={rowGap} onChange={val => setAttributes({ rowGap: val })} units={[pxUnit(40), perUnit(3), emUnit(2.5)]} isResetValueOnUnitChange={true} />
-
-						<InlineDetailMediaUpload className='mt10' value={img} onChange={val => setAttributes({ img: val })} placeholder={__('Enter Image URL', 'block-directory')} />
-
-						<IconControl className='mt20' icon={icon} onChange={val => setAttributes({ icon: val })} defaults={{ class: 'fab fa-wordpress' }} />
-
-						<PanelRow>
-							<Label mt='0'>{__('Position:', 'block-directory')}</Label>
-							<BtnGroup value={layout} onChange={val => {
-								setAttributes({ layout: val });
-								'vertical' === val && updateAllItem('number', 10);
-								'horizontal' === val && updateAllItem('number', 20);
-							}} options={layouts} isIcon={true} />
-						</PanelRow>
-						<small>{__('Some settings may change when layout will be changed.', 'block-directory')}</small>
-					</PanelBody> */}
 				</>}
 
 

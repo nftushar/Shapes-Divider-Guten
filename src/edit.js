@@ -34,7 +34,6 @@ const Edit = props => {
 
 		<div className={className} id={`sdbBlockDirectory-${clientId}`}>
 			<Style attributes={attributes} clientId={clientId} />
-			<h1>Hello Form Edit</h1>
 			{/* If rotate 180D Possition Top && If rotate 0D Possition Buttom */}
 			<Shape attributes={attributes} height={`${height.desktop}`} width={`${width}`} style={{ fill: color, transform: `rotate(${'top' === possition ? 0 : 180}deg)` }} />
 
