@@ -55,38 +55,6 @@
 		"color": {
 			"type": "string",
 			"default": "#fe6601"
-		},
-		"separator": {
-			"type": "object",
-			"default": {
-				"width": "20%",
-				"height": "2px",
-				"style": "solid",
-				"color": "#bbb"
-			}
-		},
-		"padding": {
-			"type": "object",
-			"default": {
-				"vertical": "15px",
-				"horizontal": "30px"
-			}
-		},
-		"margin": {
-			"type": "object",
-			"default": {
-				"bottom": "15px"
-			}
-		},
-		"border": {
-			"type": "object",
-			"default": {
-				"radius": "5px"
-			}
-		},
-		"shadow": {
-			"type": "array",
-			"default": {}
 		}
 	},
 	"supports": {

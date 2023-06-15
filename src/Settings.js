@@ -16,15 +16,15 @@ const Settings = ({ attributes, setAttributes, setActiveIndex }) => {
 
 	const [device, setDevice] = useState('desktop');
 
-	const addItem = () => {
-		setAttributes({
-			items: [...items, {
-				number: 10,
-				text: 'Vertical'
-			}]
-		});
-		setActiveIndex(items.length);
-	}
+	// const addItem = () => {
+	// 	setAttributes({
+	// 		items: [...items, {
+	// 			number: 10,
+	// 			text: 'Vertical'
+	// 		}]
+	// 	});
+	// 	setActiveIndex(items.length);
+	// }
 
 	// const updateAllItem = (type, val, otherType = false) => {
 	// 	const newItems = [...items];
