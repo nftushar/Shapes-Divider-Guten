@@ -28,14 +28,34 @@ const Edit = props => {
 		setAttributes({ items: newItems });
 	}
 
+	const isInSection = false;
 
 	return <>
+
+		<style>
+			{`
+			#sdbBlockDirectory-${clientId}{
+				position: ${isInSection ? 'absolute' : 'relative'};
+				top: ${'top' === possition ? 0 : 'auto'};
+				bottom: ${'bottom' === possition ? 0 : 'auto'};
+			}
+			#sdbBlockDirectory-${clientId} svg{
+				width: calc(${width}% + 1.3px);
+				height: ${height.desktop};
+				fill: ${color};
+				transform: rotate(${'top' === possition ? 0 : 180}deg);
+			}`
+			}
+		</style>
+
 		<Settings attributes={attributes} setAttributes={setAttributes} updateItem={updateItem} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
 
 		<div className={className} id={`sdbBlockDirectory-${clientId}`}>
-			<Style attributes={attributes} clientId={clientId} />
+			{/* <Style attributes={attributes} clientId={clientId} /> */}
 			{/* If rotate 180D Possition Top && If rotate 0D Possition Buttom */}
-			<Shape attributes={attributes} height={`${height.desktop}`} width={`${width}`} style={{ fill: color, transform: `rotate(${'top' === possition ? 0 : 180}deg)` }} />
+			{/* <Shape attributes={attributes} height={`${height.desktop}`} width={` */}
+
+			<Shape attributes={attributes} />
 
 		</div>
 	</>;

@@ -11,21 +11,15 @@ html {
 }
 
 // Block Directory
-.wp-block-sdb-sdb-shape-divider {
+.wp-block-sdb-shapes {
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+	left: 0;
+	line-height: 0;
+	z-index: 0; // make it dynamic
+
 	* {
 		box-sizing: border-box;
-	}
-
-	.sdbBlockDirectory {
-		display: inline-block;
-	}
-
-	.icon {
-		font-style: inherit;
-	}
-
-	img {
-		width: 100%;
-		max-width: 100%;
 	}
 }

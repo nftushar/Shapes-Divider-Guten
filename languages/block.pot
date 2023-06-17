@@ -1,0 +1,96 @@
+# Copyright (C) 2023 bPlugins LLC
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Shape Divider 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/Shape Divider\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-06-15T13:13:05+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: sdb-shape-divider\n"
+
+#. Plugin Name of the plugin
+msgid "Shape Divider"
+msgstr ""
+
+#. Description of the plugin
+msgid "Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns."
+msgstr ""
+
+#. Author of the plugin
+msgid "bPlugins LLC"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://bplugins.com"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:602
+msgid "Curve"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:603
+msgid "Tilt"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:604
+msgid "CurveAcymmetrical"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:605
+msgid "Waves"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:606
+msgid "Waves Opacity"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:610
+msgid "Vertical"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:611
+msgid "Horizontal"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:615
+msgid "General"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:616
+msgid "Style"
+msgstr ""
+
+#: block.json
+msgctxt "block title"
+msgid "Shape Divider"
+msgstr ""
+
+#: block.json
+msgctxt "block description"
+msgid "Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns,"
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "sdb"
+msgstr ""
+
+#: block.json
+msgctxt "block keyword"
+msgid "sdb-shape-divider"
+msgstr ""

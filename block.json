@@ -22,15 +22,6 @@
 			"type": "string",
 			"default": "curve"
 		},
-		"items": {
-			"type": "array",
-			"default": [
-				{
-					"number": 10,
-					"text": "Vertical"
-				}
-			]
-		},
 		"possition": {
 			"type": "string",
 			"default": "bottom"
@@ -44,13 +35,8 @@
 			}
 		},
 		"width": {
-			"type": "string",
-			"default": "100%"
-		},
-		"content": {
-			"type": "string",
-			"default": "Content of the block",
-			"selector": ".sdbBlockDirectory .content"
+			"type": "number",
+			"default": 100
 		},
 		"color": {
 			"type": "string",
