@@ -1,5 +1,5 @@
 const Style = ({ attributes, clientId }) => {
-	const { color, possition, width, height, isInSection } = attributes;
+	const { color, possition, width, height, isInSection, zindex } = attributes;
 
 	const mainSl = `#sdbShapeDivider-${clientId}`;
 
@@ -9,6 +9,7 @@ const Style = ({ attributes, clientId }) => {
 			position: ${isInSection ? 'absolute' : 'relative'};
 			top: ${'top' === possition ? 0 : 'auto'};
 			bottom: ${'bottom' === possition ? 0 : 'auto'};
+			z-index: ${zindex}
 		}
 		${mainSl} svg{
 			width: calc(${width}% + 1.3px);

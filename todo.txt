@@ -1,19 +1,11 @@
-Shape Selector Dropdown,
-color,
-Top/Button Dropdown,
-Height, Width RangeControl
-
-
-Flipper On/Off Button,
 
 
 
 
- Device  Controller
+change radio to select control
+add keywords in block.json
+update readme.txt
+ 
 
 
-
- change radio to select control
- add keywords in block.json
  z-index
- update readme.txt

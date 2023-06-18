@@ -1,7 +1,7 @@
-=== Block Directory - Block Directory Block ===
-Contributors: abuhayat, charlescormier
+===  Shape Divider ===
+Contributors: abuhayat, Charles Cormier
 Donate link: https://gum.co/wpdonate/
-Tags: block, key1, key2, key3, Gutenberg block
+Tags: "sdb","sdb-shape-divider", "Shape","divider" Gutenberg block
 Requires at least: 5.0+
 Tested up to: 6.2.2
 Stable tag: 1.0.0
@@ -24,9 +24,9 @@ Large Description
 
 
 = How to use =
-- First install the Block Directory plugin
-- Add the Block Directory block from the block category called "Widgets" in Gutenberg editor.
-- You can change block settings from the right side settings sidebar.
+- First. install the Shape Divider plugin
+- Add the Shape Divider block from the block category called "Widgets" in Gutenberg editor.
+- You can change block settings from the right-side settings sidebar.
 - Enjoy!
 
 * For installation help click on Installation Tab
@@ -58,25 +58,25 @@ Large Description
 
 = From Gutenberg Editor: =
 1. Go to the WordPress Block/Gutenberg Editor
-2. Search For **Block Directory**
-3. Click on the **Block Directory** to add the block
+2. Search For **Shape Divider**
+3. Click on the **Shape Divider** to add the block
 
 = Download & Upload: =
-1. Download the **Block Directory** plugin (*.zip file*)
+1. Download the **Shape Divider** plugin (*.zip file*)
 2. In your admin area, go to the Plugins menu and click on **Add New**
 3. Click on **Upload Plugin** and choose the **`sdb-shape-divider.zip`** file and click on **Install Now**
 4. Activate the plugin and Enjoy!
 
 = Manually: =
-1. Download and upload the **Block Directory** plugin to the **`/wp-content/plugins/`** directory
+1. Download and upload the **Shape Divider** plugin to the **`/wp-content/plugins/`** directory
 2. Activate the plugin through the Plugins menu in WordPress
 
 
 == Frequently Asked Questions ==
 
-= Is Block Directory free? =
+= Is Shape Divider free? =
 
-Yes, Block Directory is a free Gutenberg block plugin.
+Yes, Shape Divider is a free Gutenberg block plugin.
 
 = Does it work with any WordPress theme? =
 
@@ -97,7 +97,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Screenshots ==
 
-1. Block Directory
+1. Shape Divider
 2. Settings
 
 

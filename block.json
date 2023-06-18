@@ -6,7 +6,9 @@
 	"category": "widgets",
 	"keywords": [
 		"sdb",
-		"sdb-shape-divider"
+		"sdb-shape-divider",
+		"shap",
+		"divider"
 	],
 	"textdomain": "shape-divider",
 	"attributes": {
@@ -45,6 +47,10 @@
 		"color": {
 			"type": "string",
 			"default": "#fe6601"
+		},
+		"zindex":{
+			"type":"number",
+			"default": 10
 		}
 	},
 	"supports": {

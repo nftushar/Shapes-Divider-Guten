@@ -12,12 +12,13 @@ html {
 
 // Shape Divider
 .wp-block-sdb-shape {
-	width: 100%;
+	// width: 100%;
 	max-width: 100%;
 	overflow: hidden;
 	left: 0;
 	line-height: 0;
-	z-index: 0; // make it dynamic
+	// z-index: 0; 
+	// make it dynamic
 
 	* {
 		box-sizing: border-box;

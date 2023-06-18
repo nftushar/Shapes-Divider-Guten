@@ -1,7 +1,7 @@
 // import { useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, TabPanel, SelectControl, RadioControl, __experimentalUnitControl as UnitControl, } from '@wordpress/components';
+import { PanelBody, PanelRow, TabPanel, SelectControl, __experimentalUnitControl as UnitControl, } from '@wordpress/components';
 
 // Settings Components
 import { Label, BColor } from '../../Components';
@@ -14,7 +14,7 @@ import { ToggleControl } from '@wordpress/components';
 import { RangeControl } from '@wordpress/components';
 
 const Settings = ({ attributes, setAttributes }) => {
-	const { shape, isInSection, possition, width, height, color } = attributes;
+	const { shape, isInSection, possition, width, height, color, zindex } = attributes;
 
 	return <>
 		<InspectorControls>
@@ -35,11 +35,13 @@ const Settings = ({ attributes, setAttributes }) => {
 
 						<PanelRow className='mt20'>
 							<Label mt='0' mb='0'>{__('possition:', 'b-blocks')}</Label>
-							<RadioControl selected={possition} onChange={val => setAttributes({ possition: val })} options={[
-								{ label: 'Top', value: 'top' },
-								{ label: 'Buttom', value: 'bottom' },
-
-							]}
+							<ToggleControl
+								checked={possition === 'top'}
+								onChange={val => setAttributes({ possition: val ? 'top' : 'bottom' })}
+								options={[
+									{ label: __('Top', 'b-blocks'), value: 'top' },
+									{ label: __('Bottom', 'b-blocks'), value: 'bottom' },
+								]}
 							/>
 						</PanelRow>
 
@@ -47,6 +49,10 @@ const Settings = ({ attributes, setAttributes }) => {
 						<RangeControl value={width} onChange={val => setAttributes({ width: val })} min={100} max={300} />
 
 						<UnitControl className='mt20' label={__('Height:', 'shape-divider')} labelPosition='left' value={height.desktop} onChange={val => setAttributes({ height: { desktop: val, tablet: val, mobile: val } })} units={[pxUnit(), emUnit(), vhUnit()]} isResetValueOnUnitChange={true} />
+
+						{/* For z-index */}
+						<UnitControl className='mt20' label={__('Z-Index:', 'shape-divider')} labelPosition='left' value={zindex} onChange={val => setAttributes({ zindex: val })} />
+
 					</PanelBody>
 				</>}
 
