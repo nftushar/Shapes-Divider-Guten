@@ -1,21 +1,14 @@
 import { __ } from '@wordpress/i18n';
 
-import { verticalLineIcon, horizontalLineIcon } from './icons';
-
 export const shapes = [
-	{ label: __('Curve', 'sdb-shape-divider'), value: 'curve' },
-	{ label: __('Tilt', 'sdb-shape-divider'), value: 'tilt' },
-	{ label: __('CurveAcymmetrical', 'sdb-shape-divider'), value: 'curveAcymmetrical' },
-	{ label: __('Waves', 'sdb-shape-divider'), value: 'waves' },
-	{ label: __('Waves Opacity', 'sdb-shape-divider'), value: 'waves-opacity' }
-];
-
-export const layouts = [
-	{ label: __('Vertical', 'sdb-shape-divider'), value: 'vertical', icon: verticalLineIcon },
-	{ label: __('Horizontal', 'sdb-shape-divider'), value: 'horizontal', icon: horizontalLineIcon }
+	{ label: __('Curve', 'shape-divider'), value: 'curve' },
+	{ label: __('Tilt', 'shape-divider'), value: 'tilt' },
+	{ label: __('Curve Acymmetrical', 'shape-divider'), value: 'curve-acymmetrical' },
+	{ label: __('Waves', 'shape-divider'), value: 'waves' },
+	{ label: __('Waves Opacity', 'shape-divider'), value: 'waves-opacity' }
 ];
 
 export const generalStyleTabs = [
-	{ name: 'general', title: __('General', 'sdb-shape-divider') },
-	{ name: 'style', title: __('Style', 'sdb-shape-divider') }
+	{ name: 'general', title: __('General', 'shape-divider') },
+	{ name: 'style', title: __('Style', 'shape-divider') }
 ];

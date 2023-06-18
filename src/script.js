@@ -4,19 +4,19 @@ import './style.scss';
 import Style from './Style';
 import Shape from './Components/Shape';
 
-// Block Directory
+// Shape Divider
 document.addEventListener('DOMContentLoaded', () => {
-	const allBlockDirectory = document.querySelectorAll('.wp-block-sdb-shapes');
-	allBlockDirectory.forEach(directory => {
-		const attributes = JSON.parse(directory.dataset.attributes);
-		const { color, possition, width, height } = attributes;
+	const shapeEls = document.querySelectorAll('.wp-block-sdb-shape');
+	shapeEls.forEach(shapeEl => {
+		const attributes = JSON.parse(shapeEl.dataset.attributes);
+
 		render(<>
 			<Style attributes={attributes} clientId={attributes.cId} />
 
-			<Shape attributes={attributes} height={`${height.desktop}`} width={`${width}`} style={{ fill: color, transform: `rotate(${'top' === possition ? 0 : 180}deg)` }} />
-		</>, directory);
+			<Shape attributes={attributes} />
+		</>, shapeEl);
 
-		directory?.removeAttribute('data-attributes');
+		shapeEl?.removeAttribute('data-attributes');
 	});
 });
 

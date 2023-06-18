@@ -7,50 +7,45 @@
  * Author URI: http://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain: sdb-shape-divider
+ * Text Domain: shape-divider
  */
 
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
 // Constant
-define( 'sdb_PLUGIN_VERSION', 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.0' );
-define( 'sdb_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
+define( 'SDB_VERSION', 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.0' );
+define( 'SDB_DIR', plugin_dir_url( __FILE__ ) );
 
-// Block Directory
-class sdbBlockDirectory{
+// Shape Divider
+class sdbShapeDivider{
 	function __construct(){
-		add_action( 'enqueue_block_assets', [$this, 'enqueueBlockAssets'] );
 		add_action( 'init', [$this, 'onInit'] );
 	}
 
-	function enqueueBlockAssets(){
-		wp_enqueue_style( 'fontAwesome', sdb_ASSETS_DIR . 'css/fontAwesome.min.css', [], '5.15.4' ); // Font Awesome
-	}
-
 	function onInit() {
-		wp_register_style( 'sdb-sdb-shape-divider-editor-style', plugins_url( 'dist/editor.css', __FILE__ ), [ 'wp-edit-blocks' ], sdb_PLUGIN_VERSION ); // Backend Style
-		wp_register_style( 'sdb-sdb-shape-divider-style', plugins_url( 'dist/style.css', __FILE__ ), [ 'wp-editor' ], sdb_PLUGIN_VERSION ); // Style
+		wp_register_style( 'sdb-shape-style', plugins_url( 'dist/style.css', __FILE__ ), [], SDB_VERSION ); // Style
+		wp_register_style( 'sdb-shape-editor-style', plugins_url( 'dist/editor.css', __FILE__ ), [ 'sdb-shape-style' ], SDB_VERSION ); // Backend Style
 
 		register_block_type( __DIR__, [
-			'editor_style'		=> 'sdb-sdb-shape-divider-editor-style',
-			'style'				=> 'sdb-sdb-shape-divider-style',
+			'editor_style'		=> 'sdb-shape-editor-style',
+			'style'				=> 'sdb-shape-style',
 			'render_callback'	=> [$this, 'render']
 		] ); // Register Block
 
-		wp_set_script_translations( 'sdb-sdb-shape-divider-editor-script', 'sdb-shape-divider', plugin_dir_path( __FILE__ ) . 'languages' ); // Translate
+		wp_set_script_translations( 'sdb-shape-editor-script', 'sdb-shape-divider', plugin_dir_path( __FILE__ ) . 'languages' ); // Translate
 	}
 
 	function render( $attributes ){
 		extract( $attributes );
 
 		$className = $className ?? '';
-		$sdbBlockClassName = 'wp-block-sdb-shapes ' . $className . ' align' . $align;
+		$blockClassName = 'wp-block-sdb-shape ' . $className . ' align' . $align;
 
 		ob_start(); ?>
-		<div class='<?php echo esc_attr( $sdbBlockClassName ); ?>' id='sdbBlockDirectory-<?php echo esc_attr( $cId ) ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'></div>
+		<div class='<?php echo esc_attr( $blockClassName ); ?>' id='sdbShapeDivider-<?php echo esc_attr( $cId ) ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'></div>
 
 		<?php return ob_get_clean();
 	} // Render
 }
-new sdbBlockDirectory();
+new sdbShapeDivider();

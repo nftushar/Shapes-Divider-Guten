@@ -1,6 +1,6 @@
 {
 	"apiVersion": "1",
-	"name": "sdb/shapes",
+	"name": "sdb/shape",
 	"title": "Shape Divider",
 	"description": "Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns,",
 	"category": "widgets",
@@ -8,11 +8,11 @@
 		"sdb",
 		"sdb-shape-divider"
 	],
-	"textdomain": "sdb-shape-divider",
+	"textdomain": "shape-divider",
 	"attributes": {
 		"align": {
 			"type": "string",
-			"default": ""
+			"default": "full"
 		},
 		"cId": {
 			"type": "string",
@@ -21,6 +21,10 @@
 		"shape": {
 			"type": "string",
 			"default": "curve"
+		},
+		"isInSection": {
+			"type": "boolean",
+			"default": false
 		},
 		"possition": {
 			"type": "string",

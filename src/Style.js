@@ -1,38 +1,20 @@
-import { getBackgroundCSS, getBorderCSS, getColorsCSS, getIconCSS, getSeparatorCSS, getMultiShadowCSS, getSpaceCSS, getTypoCSS } from '../../Components/utils/getCSS';
-
 const Style = ({ attributes, clientId }) => {
-	const { columnGap, rowGap, alignment, textAlign, width, background, typography, color, colors, icon, separator, padding, margin, border, shadow } = attributes;
+	const { color, possition, width, height, isInSection } = attributes;
 
-	const mainSl = `#sdbBlockDirectory-${clientId}`;
-	const directorySl = `${mainSl} .sdbBlockDirectory`;
+	const mainSl = `#sdbShapeDivider-${clientId}`;
 
 	return <style dangerouslySetInnerHTML={{
 		__html: `
-		${getTypoCSS('', typography)?.googleFontLink}
-		${getTypoCSS(`${directorySl} .content`, typography)?.styles}
-
 		${mainSl}{
-			text-align: ${alignment};
+			position: ${isInSection ? 'absolute' : 'relative'};
+			top: ${'top' === possition ? 0 : 'auto'};
+			bottom: ${'bottom' === possition ? 0 : 'auto'};
 		}
-		${directorySl}{
-			grid-gap: ${rowGap} ${columnGap};
-			text-align: ${textAlign};
-			width: ${['0px', '0%', '0em'].includes(width) ? 'auto' : width};
-			${getBackgroundCSS(background)}
-			padding: ${getSpaceCSS(padding)};
-			margin: ${getSpaceCSS(margin)};
-			${getBorderCSS(border)}
-			box-shadow: ${getMultiShadowCSS(shadow)};
-		}
-		${directorySl} .content{
-			color: ${color};
-			${getColorsCSS(colors)}
-		}
-		${directorySl} .icon{
-			${getIconCSS(icon)}
-		}
-		${directorySl} .separator{
-			${getSeparatorCSS(separator)}
+		${mainSl} svg{
+			width: calc(${width}% + 1.3px);
+			height: ${height.desktop};
+			fill: ${color};
+			transform: rotate(${'top' === possition ? 0 : 180}deg);
 		}
 	`}} />;
 }

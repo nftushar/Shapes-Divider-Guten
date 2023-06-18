@@ -24,6 +24,6 @@ exports.bundle = () => (
 		'!todo.txt',
 		'!webpack.config.js',
 	])
-		.pipe(zip('sdb-shape-divider.zip'))
+		.pipe(zip('shape-divider.zip'))
 		.pipe(gulp.dest('bundled'))
 );
