@@ -34,7 +34,7 @@ const Settings = ({ attributes, setAttributes }) => {
 						<small>{__(`If you enable 'Is in Section', Please add position relative to the parent element. Also, you can change 'z-index' if you need.`, 'shape-divider')}</small>
 
 						<PanelRow className='mt20'>
-							<Label mt='0' mb='0'>{__('possition:', 'b-blocks')}</Label>
+							{/* <Label mt='0' mb='0'>{__('possition:', 'b-blocks')}</Label>
 							<ToggleControl
 								checked={possition === 'top'}
 								onChange={val => setAttributes({ possition: val ? 'top' : 'bottom' })}
@@ -42,7 +42,12 @@ const Settings = ({ attributes, setAttributes }) => {
 									{ label: __('Top', 'b-blocks'), value: 'top' },
 									{ label: __('Bottom', 'b-blocks'), value: 'bottom' },
 								]}
-							/>
+							/> */}
+
+							<Label className=''>{__('Shape Type:', 'shape-divider')}</Label>
+							<SelectControl
+								value={possition} options={[{ label: __('Top', 'b-blocks'), value: 'top' }, { label: __('Bottom', 'b-blocks'), value: 'bottom' },]} onChange={newPosition => setAttributes({ possition: newPosition })} />
+
 						</PanelRow>
 
 						<Label>{__('Width:', 'shape-divider')}</Label>
