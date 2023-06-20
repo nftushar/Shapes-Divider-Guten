@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-18T18:14:27+00:00\n"
+"POT-Creation-Date: 2023-06-20T10:17:22+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: shape-divider\n"
@@ -31,79 +31,80 @@ msgid "http://bplugins.com"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:579
+#: dist/editor.js:779
 msgid "Curve"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:580
+#: dist/editor.js:780
 msgid "Tilt"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:581
+#: dist/editor.js:781
 msgid "Curve Acymmetrical"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:582
+#: dist/editor.js:782
 msgid "Waves"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:583
+#: dist/editor.js:783
 msgid "Waves Opacity"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:587
+#: dist/editor.js:787
 msgid "General"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:588
+#: dist/editor.js:788
 msgid "Style"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:612
-#: dist/editor.js:649
+#: dist/editor.js:810
+#: dist/editor.js:849
 msgid "Shape"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:614
+#: dist/editor.js:812
+#: dist/editor.js:819
 msgid "Shape Type:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:619
-msgid "Is in a section?"
-msgstr ""
-
-#: dist/editor.js:1
-#: dist/editor.js:623
+#: dist/editor.js:816
 msgid "If you enable 'Is in Section', Please add position relative to the parent element. Also, you can change 'z-index' if you need."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:637
+#: dist/editor.js:824
 msgid "Width:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:640
+#: dist/editor.js:826
 msgid "Height:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:643
-msgid "Z-Index:"
+#: dist/editor.js:828
+msgid "Shape Height:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:650
+#: dist/editor.js:850
 msgid "Color:"
+msgstr ""
+
+#: dist/editor.js:1
+#: dist/editor.js:852
+msgid "Bg Color"
 msgstr ""
 
 #: block.json

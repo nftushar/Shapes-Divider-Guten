@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { __ } from '@wordpress/i18n';
+// import { __ } from '@wordpress/i18n';
 import { tabController } from '../../Components/utils/functions';
 
 import Settings from './Settings';

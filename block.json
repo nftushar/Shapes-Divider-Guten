@@ -23,15 +23,15 @@
 		"background": {
 			"type": "object",
 			"default": {
-				"color": "#fe6601"
+				"color": "#FFC61C"
 			}
 		},
 		"padding": {
 			"type": "object",
 			"default": {
-				"top": "100px",
+				"top": "0px",
 				"right": "0px",
-				"bottom": "100px",
+				"bottom": "150px",
 				"left": "0px"
 			}
 		},
