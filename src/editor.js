@@ -4,6 +4,7 @@ import metadata from '../block.json';
 import Edit from './Edit';
 import './editor.scss';
 import { blockIcon } from './utils/icons';
+import { InnerBlocks } from '@wordpress/block-editor';
 
 registerBlockType(metadata, {
 	icon: blockIcon,
@@ -11,5 +12,5 @@ registerBlockType(metadata, {
 	// Build in Functions
 	edit: Edit,
 
-	save: () => null
+	save: () => <InnerBlocks.Content />
 });

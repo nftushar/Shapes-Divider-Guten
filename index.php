@@ -36,16 +36,24 @@ class sdbShapeDivider{
 		wp_set_script_translations( 'sdb-shape-editor-script', 'sdb-shape-divider', plugin_dir_path( __FILE__ ) . 'languages' ); // Translate
 	}
 
-	function render( $attributes ){
+	function render( $attributes, $content ){
 		extract( $attributes );
 
 		$className = $className ?? '';
 		$blockClassName = 'wp-block-sdb-shape ' . $className . ' align' . $align;
 
 		ob_start(); ?>
-		<div class='<?php echo esc_attr( $blockClassName ); ?>' id='sdbShapeDivider-<?php echo esc_attr( $cId ) ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'></div>
+		<div class='<?php echo esc_attr( $blockClassName ); ?>' id='sdbShapeDivider-<?php echo esc_attr( $cId ) ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>' data-content='<?php echo esc_attr( wp_json_encode( $content ) ); ?>'>
+	
+			<?php echo wp_kses_post( $this->shape() ); ?>
+		</div>
 
 		<?php return ob_get_clean();
 	} // Render
+
+
+	function shape(  ){
+
+	}
 }
 new sdbShapeDivider();
