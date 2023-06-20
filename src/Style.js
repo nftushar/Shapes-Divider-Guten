@@ -13,8 +13,8 @@ const Style = ({ attributes, clientId }) => {
 		__html: `
 		${mainSl}{
 			height: ${height.desktop};
-			${getBackgroundCSS(background)};
-			padding: ${getBoxValue(padding)}
+			${getBackgroundCSS(background)}
+			padding: ${getBoxValue(padding)};
 		}
 
 		${mainSl} svg{

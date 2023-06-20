@@ -28,25 +28,27 @@ const Edit = props => {
 
 			<Shape attributes={attributes} />
 
-			<InnerBlocks
-				template={innerBlocksTemplate}
-				renderAppender={() => (
-					<Inserter
-						rootClientId={clientId}
-						isAppender
-						renderToggle={({ onToggle, disabled }) => (
-							<IconButton
-								className='bTempAddTab'
-								onClick={onToggle}
-								disabled={disabled}
-								label={__('Add New Tab', 'b-temp')}
-								icon='plus-alt'>
-								{__('Add New Tab', 'b-temp')}
-							</IconButton>
-						)}
-					/>
-				)}
-			/>
+			<div className='shapeContent'>
+				<InnerBlocks
+					template={innerBlocksTemplate}
+					renderAppender={() => (
+						<Inserter
+							rootClientId={clientId}
+							isAppender
+							renderToggle={({ onToggle, disabled }) => (
+								<IconButton
+									className='bTempAddTab'
+									onClick={onToggle}
+									disabled={disabled}
+									label={__('Add New Tab', 'b-temp')}
+									icon='plus-alt'>
+									{__('Add New Tab', 'b-temp')}
+								</IconButton>
+							)}
+						/>
+					)}
+				/>
+			</div>
 		</div>
 	</>;
 };

@@ -1,7 +1,7 @@
 // import { useState } from 'react';
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, PanelRow, TabPanel, SelectControl, __experimentalUnitControl as UnitControl, RangeControl } from '@wordpress/components';
+import { PanelBody, PanelRow, TabPanel, SelectControl, __experimentalUnitControl as UnitControl, RangeControl, __experimentalBoxControl as BoxControl } from '@wordpress/components';
 
 // Settings Components
 import { Label, BColor, Background } from '../../Components';
@@ -12,7 +12,7 @@ import { emUnit, pxUnit, vhUnit } from '../../Components/utils/options';
 import { generalStyleTabs, shapes } from './utils/options';
 
 const Settings = ({ attributes, setAttributes }) => {
-	const { height, shape, shapePossition, shapeWidth, shapeHeight, shapeColor, background } = attributes;
+	const { height, shape, shapePossition, shapeWidth, shapeHeight, shapeColor, background, padding } = attributes;
 
 	return <>
 		<InspectorControls>
@@ -42,8 +42,20 @@ const Settings = ({ attributes, setAttributes }) => {
 						{/* <UnitControl className='mt20' label={__('Z-Index:', 'shape-divider')} labelPosition='left' value={zindex} onChange={val => setAttributes({ zindex: val })} /> */}
 
 					</PanelBody>
+					<PanelBody className='bPlPanelBody' title={__('Tab/Menu', 'stepped-content')}>
+						<BoxControl
+							label={__("x Padding", "tcb")}
+							values={padding}
+							resetValues={{
+								"top": "0px",
+								"right": "0px",
+								"bottom": "0px",
+								"left": "0px"
+							}}
+							onChange={(value) => setAttributes({ padding: value })} />
+					</PanelBody>
 				</>}
-
+				{/* {console.log(padding)} */}
 				{'style' === tab.name && <>
 					<PanelBody className='bPlPanelBody' title={__('Shape', 'shape-divider')}>
 						<BColor label={__('Color:', 'shape-divider')} value={shapeColor} onChange={val => setAttributes({ shapeColor: val })} defaultColor='#333' />

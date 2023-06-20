@@ -17,10 +17,13 @@ html {
 	z-index: 0;
 	background-color: #4527a4;
 
+	.shapeContent{
+		z-index: 2;
+		position: relative;
+	}
+
 	* {
 		box-sizing: border-box;
-		z-index: 2;
-		position: inherit;
 	}
 
 	svg {
