@@ -12,7 +12,7 @@ const Style = ({ attributes, clientId }) => {
 	return <style dangerouslySetInnerHTML={{
 		__html: `
 		${mainSl}{
-			height: ${height.desktop};
+			min-height: ${height.desktop};
 			${getBackgroundCSS(background)}
 			padding: ${getBoxValue(padding)};
 		}
