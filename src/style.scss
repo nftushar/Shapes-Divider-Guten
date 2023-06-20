@@ -12,15 +12,21 @@ html {
 
 // Shape Divider
 .wp-block-sdb-shape {
-	// width: 100%;
-	max-width: 100%;
+	position: relative;
 	overflow: hidden;
-	left: 0;
-	line-height: 0;
-	// z-index: 0; 
-	// make it dynamic
+	z-index: 0;
+	background-color: #4527a4;
 
 	* {
 		box-sizing: border-box;
+		z-index: 2;
+		position: inherit;
+	}
+
+	svg {
+		position: absolute;
+		left: 0;
+		line-height: 0;
+		z-index: 1;
 	}
 }

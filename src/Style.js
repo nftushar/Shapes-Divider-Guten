@@ -1,22 +1,31 @@
+import { getBackgroundCSS } from './Components/utils/getCSS';
+import { getBoxValue } from './utils/function';
+
 const Style = ({ attributes, clientId }) => {
-	const { color, possition, width, height, isInSection, zindex } = attributes;
+	const { shapeColor, shapePossition, shapeWidth, shapeHeight, padding, background, height } = attributes;
 
 	const mainSl = `#sdbShapeDivider-${clientId}`;
+	// ${getBackgroundCSS(background)}
+	// 		${getBoxValue(padding)}
+// console.log(background);
 
 	return <style dangerouslySetInnerHTML={{
 		__html: `
 		${mainSl}{
-			position: ${isInSection ? 'absolute' : 'relative'};
-			top: ${'top' === possition ? 0 : 'auto'};
-			bottom: ${'bottom' === possition ? 0 : 'auto'};
-			z-index: ${zindex}
-		}
-		${mainSl} svg{
-			width: calc(${width}% + 1.3px);
 			height: ${height.desktop};
-			fill: ${color};
-			transform: rotate(${'top' === possition ? 0 : 180}deg);
+			${getBackgroundCSS(background)};
+			padding: ${getBoxValue(padding)}
+		}
+
+		${mainSl} svg{
+			width: calc(${shapeWidth}% + 1.3px);
+			height: ${shapeHeight.desktop};
+			fill: ${shapeColor};
+			top: ${'top' === shapePossition ? 0 : 'auto'};
+			bottom: ${'bottom' === shapePossition ? 0 : 'auto'};
+			transform: rotate(${'top' === shapePossition ? 0 : 180}deg);
 		}
 	`}} />;
+
 }
 export default Style;

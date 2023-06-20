@@ -20,19 +20,38 @@
 			"type": "string",
 			"default": ""
 		},
+		"background": {
+			"type": "object",
+			"default": {
+				"color": "#fe6601"
+			}
+		},
+		"padding": {
+			"type": "object",
+			"default": {
+				"top": "100px",
+				"right": "0px",
+				"bottom": "100px",
+				"left": "0px"
+			}
+		},
+		"height": {
+			"type": "object",
+			"default": {
+				"desktop": "250px",
+				"tablet": "250px",
+				"mobile": "250px"
+			}
+		},
 		"shape": {
 			"type": "string",
 			"default": "curve"
 		},
-		"isInSection": {
-			"type": "boolean",
-			"default": false
-		},
-		"possition": {
+		"shapePossition": {
 			"type": "string",
 			"default": "bottom"
 		},
-		"height": {
+		"shapeHeight": {
 			"type": "object",
 			"default": {
 				"desktop": "150px",
@@ -40,16 +59,16 @@
 				"mobile": "150px"
 			}
 		},
-		"width": {
+		"shapeWidth": {
 			"type": "number",
 			"default": 100
 		},
-		"color": {
+		"shapeColor": {
 			"type": "string",
 			"default": "#fe6601"
 		},
-		"zindex":{
-			"type":"number",
+		"zindex": {
+			"type": "number",
 			"default": 0
 		}
 	},
