@@ -40,9 +40,9 @@ const Edit = props => {
 									className='bTempAddTab'
 									onClick={onToggle}
 									disabled={disabled}
-									label={__('Add New Tab', 'b-temp')}
+									// label={__('Add New Tab', 'b-temp')}
 									icon='plus-alt'>
-									{__('Add New Tab', 'b-temp')}
+									{/* {__('Add New Tab', 'b-temp')} */}
 								</IconButton>
 							)}
 						/>
