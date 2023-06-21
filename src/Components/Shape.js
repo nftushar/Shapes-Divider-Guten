@@ -1,7 +1,7 @@
-const Shape = ({ attributes, ...props }) => {
+const Shape = ({ attributes }) => {
     const { shape } = attributes;
 
-    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" {...props}>
+    return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <ShapePath shape={shape} />
     </svg>
 }

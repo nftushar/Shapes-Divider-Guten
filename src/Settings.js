@@ -12,6 +12,7 @@ import { emUnit, pxUnit, vhUnit } from '../../Components/utils/options';
 import { generalStyleTabs, shapes } from './utils/options';
 
 const Settings = ({ attributes, setAttributes }) => {
+	
 	const { height, shape, shapePossition, shapeWidth, shapeHeight, shapeColor, background, padding } = attributes;
 
 	return <>
