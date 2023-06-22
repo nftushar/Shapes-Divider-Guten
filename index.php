@@ -90,6 +90,7 @@ class sdbShapeDivider{
 	function render( $attributes, $content ){
 		extract( $attributes );
 
+		
 		$className = $className ?? '';
 		$blockClassName = "wp-block-sdb-shape $className align$align";
 
