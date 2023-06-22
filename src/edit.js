@@ -8,23 +8,13 @@ import Shape from './Components/Shape';
 import { InnerBlocks, Inserter } from '@wordpress/block-editor';
 import { IconButton } from '@wordpress/components';
 
+// ['core/heading', { content: 'Section Shape', textAlign: "center", style: { typography: { fontSize: "52px" } }, textColor: 'white' }],
+// ['core/paragraph', { content: 'Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns.', "align": "center", "style": { "typography": { "fontSize": "18px" } }, "textColor": "white" }],
+// ['core/buttons', {},
+// 	['core/button', {}]
+// ]
 const innerBlocksTemplate = [
-	// ['core/heading', { content: 'Section Shape', textAlign: "center", style: { typography: { fontSize: "52px" } }, textColor: 'white' }],
-	// ['core/paragraph', { content: 'Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns.', "align": "center", "style": { "typography": { "fontSize": "18px" } }, "textColor": "white" }],
-	// ['core/buttons', {},
-	// 	['core/button', {}]
-	// ]
-
-	[
-	'core/heading', {
-		content: 'Section Shape',
-		textAlign: 'center',
-		style: {
-			typography: { fontSize: '52px' }
-		},
-		textColor: 'white'
-	}
-	],
+	['core/heading', { content: 'Section Shape', textAlign: "center", style: { typography: { fontSize: "52px" } }, textColor: 'white' }],
 	[
 		'core/paragraph', {
 			content: 'Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns.',
@@ -41,8 +31,9 @@ const innerBlocksTemplate = [
 				justifyContent: 'center'
 			}
 		},
-		[
+		[[
 			'core/button', {
+				text: 'View Demo',
 				textColor: 'ast-global-color-5',
 				style: {
 					spacing: {
@@ -56,7 +47,7 @@ const innerBlocksTemplate = [
 				},
 				className: 'is-style-outline'
 			}
-		]
+		]]
 	]
 
 ]
