@@ -22,25 +22,52 @@ define( 'SDB_DIR', plugin_dir_url( __FILE__ ) );
 // Shape Divider
 class sdbShapeDivider{
 
-	function getColorsCSS($colors) {
-		if (!is_array($colors)) {
-			$colors = array(); // Set an empty array as default
-		}
-	
-		extract($colors);
-		$color = $color ?? '#333';
-		$bgType = $bgType ?? 'solid';
-		$bg = $bg ?? '#0000';
+
+	function getBackgroundCSS( $bg, $isSolid = true, $isGradient = true, $isImage = true ) {
+		extract( $bg );
+		$type = $type ?? 'solid';
+		$color = $color ?? '#000000b3';
 		$gradient = $gradient ?? 'linear-gradient(135deg, #4527a4, #8344c5)';
+		$image = $image ?? [];
+		$position = $position ?? 'center center';
+		$attachment = $attachment ?? 'initial';
+		$repeat = $repeat ?? 'no-repeat';
+		$size = $size ?? 'cover';
+		$overlayColor = $overlayColor ?? '#000000b3';
 	
-		$background = $bgType === 'gradient' ? $gradient : $bg;
+		$gradientCSS = $isGradient ? "background: $gradient;" : '';
 	
-		$styles = '';
-		$styles .= $color ? "color: " . esc_attr($color) . ";" : '';
-		$styles .= ($gradient || $bg) ? "background: " . esc_attr($background) . ";" : '';
+		$imgUrl = $image['url'] ?? '';
+		$imageCSS = $isImage ? "background: url($imgUrl); background-color: $overlayColor; background-position: $position; background-size: $size; background-repeat: $repeat; background-attachment: $attachment; background-blend-mode: overlay;" : '';
+	
+		$solidCSS = $isSolid ? "background: $color;" : '';
+	
+		$styles = 'gradient' === $type ? $gradientCSS : ( 'image' === $type ? $imageCSS : $solidCSS );
 	
 		return $styles;
 	}
+
+
+
+	// function getColorsCSS($colors) {
+	// 	if (!is_array($colors)) {
+	// 		$colors = array(); // Set an empty array as default
+	// 	}
+	
+	// 	extract($colors);
+	// 	$color = $color ?? '#333';
+	// 	$bgType = $bgType ?? 'solid';
+	// 	$bg = $bg ?? '#0000';
+	// 	$gradient = $gradient ?? 'linear-gradient(135deg, #4527a4, #8344c5)';
+	
+	// 	$background = $bgType === 'gradient' ? $gradient : $bg;
+	
+	// 	$styles = '';
+	// 	$styles .= $color ? "color: " . esc_attr($color) . ";" : '';
+	// 	$styles .= ($gradient || $bg) ? "background: " . esc_attr($background) . ";" : '';
+	
+	// 	return $styles;
+	// }
 	
 
 	function __construct(){
@@ -61,11 +88,10 @@ class sdbShapeDivider{
 	}
 
 	function render( $attributes, $content ){
-		
 		extract( $attributes );
 
 		$className = $className ?? '';
-		$blockClassName = 'wp-block-sdb-shape ' . $className . ' align' . $align;
+		$blockClassName = "wp-block-sdb-shape $className align$align";
 
 		ob_start(); ?>
 		<div class='<?php echo esc_attr( $blockClassName ); ?>' id='sdbShapeDivider-<?php echo esc_attr( $cId ) ?>'>
@@ -86,20 +112,16 @@ class sdbShapeDivider{
 
 	function styles($attributes){
 		extract( $attributes );
-		
-	    // echo "<pre>";
-		// print_r("hello sdf");
-
-		// echo "<pre>";
 
 		$topVal = 'top' === $shapePossition ? '0' : 'auto';
 		$bottomVal = 'bottom' === $shapePossition ? '0' : 'auto';
 		$transform = 'top' === $shapePossition ? '0deg' : '180deg';
+		$backgroundColor = $this->getBackgroundCSS($background);
 
 		$styles = "
 			#sdbShapeDivider-$cId{
 				min-height: $height[desktop];
-				background: " . implode(' ', $background) . ";
+				$backgroundColor
 				padding: " . implode(' ', $padding) . ";
 			}
 			#sdbShapeDivider-$cId svg{
