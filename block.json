@@ -7,7 +7,7 @@
 	"keywords": [
 		"sdb",
 		"sdb-shape-divider",
-		"shap",
+		"shape",
 		"divider"
 	],
 	"textdomain": "shape-divider",
@@ -21,15 +21,16 @@
 			"default": ""
 		},
 		"background": {
-			"type": "object",
+			"type": "string",
 			"default": {
-				"color": "#FFC61C"
+				"type": "gradient",
+				"gradient": "linear-gradient(0deg, rgba(32,182,249,1) 0%, rgba(20,255,237,1) 100%)"
 			}
 		},
 		"padding": {
 			"type": "object",
 			"default": {
-				"top": "0px",
+				"top": "90px",
 				"right": "0px",
 				"bottom": "150px",
 				"left": "0px"
@@ -38,14 +39,14 @@
 		"height": {
 			"type": "object",
 			"default": {
-				"desktop": "250px",
-				"tablet": "250px",
-				"mobile": "250px"
+				"desktop": "100vh",
+				"tablet": "100vh",
+				"mobile": "100vh"
 			}
 		},
 		"shape": {
 			"type": "string",
-			"default": "curve"
+			"default": "waves-opacity"
 		},
 		"shapePossition": {
 			"type": "string",
@@ -65,11 +66,7 @@
 		},
 		"shapeColor": {
 			"type": "string",
-			"default": "#fe6601"
-		},
-		"zindex": {
-			"type": "number",
-			"default": 0
+			"default": "#fff"
 		}
 	},
 	"supports": {

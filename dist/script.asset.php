@@ -1,4 +1,4 @@
 <?php return [
-	'dependencies' => [ 'react', 'react-dom' ],
+	'dependencies' => [ ],
 	'version' => SDB_VERSION
 ];

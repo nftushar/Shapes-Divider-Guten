@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-20T10:17:22+00:00\n"
+"POT-Creation-Date: 2023-06-21T17:18:21+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: shape-divider\n"
@@ -66,44 +66,44 @@ msgid "Style"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:810
-#: dist/editor.js:849
+#: dist/editor.js:811
+#: dist/editor.js:850
 msgid "Shape"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:812
-#: dist/editor.js:819
+#: dist/editor.js:813
+#: dist/editor.js:820
 msgid "Shape Type:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:816
+#: dist/editor.js:817
 msgid "If you enable 'Is in Section', Please add position relative to the parent element. Also, you can change 'z-index' if you need."
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:824
+#: dist/editor.js:825
 msgid "Width:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:826
+#: dist/editor.js:827
 msgid "Height:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:828
+#: dist/editor.js:829
 msgid "Shape Height:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:850
+#: dist/editor.js:851
 msgid "Color:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:852
+#: dist/editor.js:853
 msgid "Bg Color"
 msgstr ""
 

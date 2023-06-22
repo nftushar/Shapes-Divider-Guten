@@ -24,9 +24,6 @@ const Settings = ({ attributes, setAttributes }) => {
 							<Label className=''>{__('Shape Type:', 'shape-divider')}</Label>
 							<SelectControl value={shape} onChange={val => setAttributes({ shape: val })} options={shapes} />
 						</PanelRow>
-
-						<small>{__(`If you enable 'Is in Section', Please add position relative to the parent element. Also, you can change 'z-index' if you need.`, 'shape-divider')}</small>
-
 						<PanelRow className='mt20'>
 							<Label className=''>{__('Shape Type:', 'shape-divider')}</Label>
 							<SelectControl
@@ -39,13 +36,10 @@ const Settings = ({ attributes, setAttributes }) => {
 
 						<UnitControl className='mt20' label={__('Shape Height:', 'shape-divider')} labelPosition='left' value={shapeHeight.desktop} onChange={val => setAttributes({ shapeHeight: { desktop: val, tablet: val, mobile: val } })} units={[pxUnit(), emUnit(), vhUnit()]} isResetValueOnUnitChange={true} />
 
-						{/* For z-index */}
-						{/* <UnitControl className='mt20' label={__('Z-Index:', 'shape-divider')} labelPosition='left' value={zindex} onChange={val => setAttributes({ zindex: val })} /> */}
-
 					</PanelBody>
 					<PanelBody className='bPlPanelBody' title={__('Tab/Menu', 'stepped-content')}>
 						<BoxControl
-							label={__("x Padding", "tcb")}
+							label={__("Content Padding", "sdb")}
 							values={padding}
 							resetValues={{
 								"top": "0px",
@@ -62,9 +56,7 @@ const Settings = ({ attributes, setAttributes }) => {
 						<BColor label={__('Color:', 'shape-divider')} value={shapeColor} onChange={val => setAttributes({ shapeColor: val })} defaultColor='#333' />
 					</PanelBody>
 					<PanelBody className='bPlPanelBody' title={__('Bg Color', 'shape-divider')}>
-						{/* <BColor label={__('Background Color:', 'shape-divider')} value={background} onChange={val => setAttributes({ background: val })} defaultColor='#333' /> */}
-
-						<Background label={__("Background Color", "tcb")} value={background} onChange={(val) =>
+						<Background label={__("Background Color", "sdb")} value={background} onChange={(val) =>
 							setAttributes({ background: val })
 						} />
 					</PanelBody>
