@@ -14,10 +14,10 @@ import { IconButton } from '@wordpress/components';
 // 	['core/button', {}]
 // ]
 const innerBlocksTemplate = [
-	['core/heading', { content: 'Section Shape', textAlign: "center", style: { typography: { fontSize: "52px" } }, textColor: 'white' }],
+	['core/heading', { content: 'Creative Shape Divider', textAlign: "center", style: { typography: { fontSize: "52px" } }, textColor: 'white' }],
 	[
 		'core/paragraph', {
-			content: 'Shape Divider is a web design tool that allows users to create unique and visually appealing dividers by customizing shapes and patterns.',
+			content: 'The Gutenberg Shape Divider plugin is an innovative tool designed to enhance the visual appeal and creativity of websites built using the WordPress Gutenberg editor. With its intuitive interface and powerful features, this plugin empowers users to create unique and captivating designs by adding customizable shape dividers to their web pages..',
 			align: 'center',
 			style: { typography: { fontSize: '18px' } },
 			textColor: 'white'

@@ -34,9 +34,7 @@ class sdbShapeDivider{
 		$repeat = $repeat ?? 'no-repeat';
 		$size = $size ?? 'cover';
 		$overlayColor = $overlayColor ?? '#000000b3';
-	
 		$gradientCSS = $isGradient ? "background: $gradient;" : '';
-	
 		$imgUrl = $image['url'] ?? '';
 		$imageCSS = $isImage ? "background: url($imgUrl); background-color: $overlayColor; background-position: $position; background-size: $size; background-repeat: $repeat; background-attachment: $attachment; background-blend-mode: overlay;" : '';
 	
@@ -46,8 +44,6 @@ class sdbShapeDivider{
 	
 		return $styles;
 	}
-
-
 
 	// function getColorsCSS($colors) {
 	// 	if (!is_array($colors)) {
@@ -90,7 +86,10 @@ class sdbShapeDivider{
 	function render( $attributes, $content ){
 		extract( $attributes );
 
-		
+		// echo "<pre>";
+		// print_r($attributes);
+		// echo "</pre>";
+
 		$className = $className ?? '';
 		$blockClassName = "wp-block-sdb-shape $className align$align";
 
@@ -117,14 +116,15 @@ class sdbShapeDivider{
 		$topVal = 'top' === $shapePossition ? '0' : 'auto';
 		$bottomVal = 'bottom' === $shapePossition ? '0' : 'auto';
 		$transform = 'top' === $shapePossition ? '0deg' : '180deg';
-		$backgroundColor = $this->getBackgroundCSS($background);
+		$backgroundCSS = $this->getBackgroundCSS($background);
 
 		$styles = "
-			#sdbShapeDivider-$cId{
+	    	#sdbShapeDivider-$cId{
 				min-height: $height[desktop];
-				$backgroundColor
+				$backgroundCSS
 				padding: " . implode(' ', $padding) . ";
 			}
+
 			#sdbShapeDivider-$cId svg{
 				width: calc($shapeWidth% + 1.3px);
 				height: $shapeHeight[desktop];

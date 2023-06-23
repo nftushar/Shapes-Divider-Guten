@@ -21,10 +21,10 @@
 			"default": ""
 		},
 		"background": {
-			"type": "string",
+			"type": "object",
 			"default": {
 				"type": "gradient",
-				"gradient": "linear-gradient(0deg, rgba(32,182,249,1) 0%, rgba(20,255,237,1) 100%)"
+				"gradient": "linear-gradient(135deg, #74E2D5, #7BCACF);"
 			}
 		},
 		"padding": {
